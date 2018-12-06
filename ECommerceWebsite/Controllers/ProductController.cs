@@ -44,5 +44,31 @@ namespace ECommerceWebsite.Controllers
         }
 
         ///////////////////////////////////////
+      
+
+        // EDIT GET:
+        [HttpGet]
+        public ActionResult Edit(int ID)
+        {
+            var product = productsService.GetProduct(ID);
+            return PartialView(product);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(Product product)
+        {
+            productsService.UpdateProduct(product);
+            return RedirectToAction("ProductTable");
+        }
+        //////////////////////////////////////////////
+
+        // DELETE 
+        [HttpPost]
+        public ActionResult Delete(Product product)
+        {
+            productsService.UpdateProduct(product);
+            return RedirectToAction("ProductTable");
+        }
+
     }
 }

@@ -5,7 +5,9 @@
 }
 
 <h2>Create Product</h2>
-<form method="post">
+<br />
+
+<form id="createProduct">
     <label>Name</label>
     <input name="Name" />
     <br />
@@ -18,5 +20,23 @@
     <input name="Price" />
     <br />
 
-    <button type="submit">SAVE</button>
+    <button id="saveBtn" type="button">SAVE</button>
 </form>
+
+
+<script>
+    $("#saveBtn").click(function () {
+        $.ajax({
+            type: 'POST',
+            url: '/Product/Create',
+            data: $("#createProduct").serialize()
+        })
+        .done(function (response) {
+            $("#tableContainer").html(response);
+            $("#actionContainer").html("");
+        })
+        .fail(function (XMLHttpRequest, textStatus, errorThrown) {
+            alert("FAILED!");
+        });
+    });
+</script>
