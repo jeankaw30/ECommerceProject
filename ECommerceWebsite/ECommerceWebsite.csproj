@@ -196,6 +196,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\NewCategoryViewModels.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -219,6 +220,7 @@
     <Content Include="Content\rev-slider\fonts\revicons\revicons90c6.eot" />
     <Content Include="Content\rev-slider\fonts\revicons\revicons90c6.ttf" />
     <Content Include="Content\rev-slider\fonts\revicons\revicons90c6.woff" />
+    <None Include="Properties\PublishProfiles\BakingECommerceProject - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />

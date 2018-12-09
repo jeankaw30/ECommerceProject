@@ -10,7 +10,7 @@ namespace ECommerceDatabase
 {
     public class  DBContext : DbContext // IDisposable
     {
-        public DBContext() : base("ECommerceConnection")
+        public DBContext() : base("ECommerce")
         {
         } 
         public DbSet<Category> Categories { get; set; }
