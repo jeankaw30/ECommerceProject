@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using ECommerce.Entities;
 using ECommerce.Services;
+using ECommerceWebsite.ViewModels;
 
 namespace ECommerceWebsite.Controllers
 {
@@ -33,13 +34,24 @@ namespace ECommerceWebsite.Controllers
         [HttpGet]
         public ActionResult Create()
         {
-            return PartialView();
+            CategoriesService categoriesService = new CategoriesService();
+            var categories = categoriesService.GetCategories();
+            return PartialView(categories);
         }
 
         [HttpPost]
-        public ActionResult Create(Product product)
+        public ActionResult Create(NewCategoryViewModels model)
         {
-            productsService.SaveProduct(product);
+            CategoriesService categoryService = new CategoriesService();
+
+            var newProduct = new Product();
+            newProduct.Name = model.Name;
+            newProduct.Description = model.Description;
+            newProduct.Price = model.Price;
+            // newProduct.CategoryID = model.CategoryID;
+            newProduct.Category = categoryService.GetCategory(model.CategoryID);
+
+            productsService.SaveProduct(newProduct);
             return RedirectToAction("ProductTable");
         }
 
