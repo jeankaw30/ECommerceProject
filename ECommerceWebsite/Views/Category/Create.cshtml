@@ -4,14 +4,65 @@
 }
 
 <h2>Create Category</h2>
+<br />
+
 <form method="post">
     <label>Name</label>
-    <input name="Name"/>
+    <input name="Name" />
     <br />
 
     <label>Description</label>
-    <input name="Description"/>
+    <input name="Description" />
+    <br />
+
+    <label>Item Image</label>
+    <input id="ImageURL" name="ImageURL" type="hidden" />
+    <input id="ImageUpload" name="Image" type="file" accept=".png,.jpg, .jpeg" />
+    <br />
+
+    <div class="thumb">
+        <img id="categoryImage" />
+    </div>
+    <br />
+
+    <label>Featured</label>
+    <input name="isFeatured" type="radio" value="True" /> True
+    <input name="isFeatured" type="radio" value="False" /> False
     <br />
 
     <button type="submit">SAVE</button>
 </form>
+<script>
+    $("#imageUpload").change(function () {
+        debugger;
+        var element = this;
+        var formData = new FormData();
+        var totalFiles = element.files.length;
+            for (var i = 0; i < totalFiles; i++) {
+                var file = element.files[i];
+                formData.append("Photo", file);
+            }
+            $.ajax({
+                type: 'POST',
+                url: '/Shared/UploadImage',
+                dataType: 'json',
+                data: formData,
+                contentType: false,
+                processType: false
+            })
+            .done(function (response) {
+                debugger;
+                console.log(response);
+
+                if (response.Success) {
+                    $("#ImageURL").val(response.ImageURL);
+                    $("#categoryImage").attr("src", response.ImageURL);
+                }
+
+            })
+            .fail(function (XMLHttpRequest, textStatus, errorThrown) {
+                alert("FAIL");
+            });
+
+    }
+</script>
