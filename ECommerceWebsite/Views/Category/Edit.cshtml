@@ -1,6 +1,8 @@
 ﻿@model ECommerce.Entities.Category
 @{
     ViewBag.Title = "Edit";
+    var trueChecked = Model.IsFeatured ? "checked" : string.Empty;
+    var falseChecked = !Model.IsFeatured ? "checked" : string.Empty;
 }
 
 <h2>Edit Category</h2>
@@ -10,11 +12,16 @@
     <input type="hidden" name="ID" value="@Model.ID" />
 
     <label>Name</label>
-    <input name="Name" value="@Model.Name"/>
+    <input name="Name" value="@Model.Name" />
     <br />
 
     <label>Description</label>
-    <input name="Description" value="@Model.Description"/>
+    <input name="Description" value="@Model.Description" />
+    <br />
+
+    <label>Featured ? </label>
+    <input name="isFeatured" type="checkbox" value="true" @trueChecked />True
+    <input name="isFeatured" type="checkbox" value="false" @falseChecked />False
     <br />
 
     <button type="submit">SAVE</button>
