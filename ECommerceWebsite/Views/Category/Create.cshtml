@@ -33,7 +33,7 @@
     <button type="submit">SAVE</button>
 </form>
 <script>
-    $("#imageUpload").change(function () {
+    $("#imageUpload").onclick(function () {
         debugger;
         var element = this;
         var formData = new FormData();
@@ -44,7 +44,7 @@
             }
             $.ajax({
                 type: 'POST',
-                url: '/Shared/UploadImage',
+                url: '/Content/images',
                 dataType: 'json',
                 data: formData,
                 contentType: false,

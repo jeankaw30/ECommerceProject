@@ -65,6 +65,10 @@
     <Compile Include="Migrations\201812090903545_AddedIsFeaturd.Designer.cs">
       <DependentUpon>201812090903545_AddedIsFeaturd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812122126059_AddedIsFeatured.cs" />
+    <Compile Include="Migrations\201812122126059_AddedIsFeatured.Designer.cs">
+      <DependentUpon>201812122126059_AddedIsFeatured.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -90,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812090903545_AddedIsFeaturd.resx">
       <DependentUpon>201812090903545_AddedIsFeaturd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812122126059_AddedIsFeatured.resx">
+      <DependentUpon>201812122126059_AddedIsFeatured.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

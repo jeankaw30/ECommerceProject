@@ -48,7 +48,7 @@ namespace ECommerceWebsite.Controllers
             newProduct.Name = model.Name;
             newProduct.Description = model.Description;
             newProduct.Price = model.Price;
-            // newProduct.CategoryID = model.CategoryID;
+            newProduct.Category = categoryService.GetCategory( model.CategoryID);
             newProduct.Category = categoryService.GetCategory(model.CategoryID);
 
             productsService.SaveProduct(newProduct);
@@ -76,9 +76,9 @@ namespace ECommerceWebsite.Controllers
 
         // DELETE 
         [HttpPost]
-        public ActionResult Delete(Product product)
+        public ActionResult Delete(int ID)
         {
-            productsService.UpdateProduct(product);
+            productsService.DeleteProduct(ID);
             return RedirectToAction("ProductTable");
         }
 

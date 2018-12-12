@@ -191,15 +191,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201812040805518_InitialCreate.cs" />
-    <Compile Include="Migrations\201812040805518_InitialCreate.Designer.cs">
-      <DependentUpon>201812040805518_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812090850056_AddedIsFeatured.cs" />
-    <Compile Include="Migrations\201812090850056_AddedIsFeatured.Designer.cs">
-      <DependentUpon>201812090850056_AddedIsFeatured.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -308,14 +299,6 @@
       <Project>{4466D9CC-4DF4-4A6B-AA51-526DC348FBA4}</Project>
       <Name>ECommerce.Services</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201812040805518_InitialCreate.resx">
-      <DependentUpon>201812040805518_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812090850056_AddedIsFeatured.resx">
-      <DependentUpon>201812090850056_AddedIsFeatured.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
