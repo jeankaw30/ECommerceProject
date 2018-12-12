@@ -1,12 +1,12 @@
-﻿@model ECommerceWebsite.ViewModels.HomeViewModel
+﻿@*model ECommerceWebsite.ViewModels.HomeViewModel*@
 @{
     ViewBag.Title = "Home Page";
 
-
-    var firstCategory = Model.FeaturedCategories[0];
-    var secondCategory = Model.FeaturedCategories[1];
-    var thirdCategory = Model.FeaturedCategories[2];
-    var fourthCategory = Model.FeaturedCategories[3];
+    //  var firstCategory = Model.FeaturedCategories.First();
+    // var firstCategory = Model.FeaturedCategories[0];
+    //var secondCategory = Model.FeaturedCategories[1];
+    //var thirdCategory = Model.FeaturedCategories[2];
+    //  var fourthCategory = Model.FeaturedCategories[3];
 }
 <!-- SLIDER -->
 <div class="rev_slider_wrapper fullwidthbanner-container">
@@ -15,7 +15,7 @@
             <!-- Slide 1 -->
             <li data-transition="random">
                 <!-- Main Image -->
-                <img src="~/Content/images/slider/slider-bg-5.jpg" alt="" data-bgposition="center center" data-no-retina>
+                <img src="~/Content/images/featured1.jpg" alt="" data-bgposition="center center" data-no-retina>
 
                 <!-- Layers -->
                 <div class="tp-caption tp-resizeme text-white font-weight-300"
@@ -194,16 +194,14 @@
                 <div class="flat-image-box style-1 data-effect div-h22 clearfix">
                     <div class="item data-effect-item">
                         <div class="inner">
-                            @if(firstCategory != null)  
-                            {                            
-                                <div class="thumb">
-                                    <img src="@firstCategory.ImageURL" alt="Image">
-                                    <div class="elm-btn">
-                                        <a href="#" class="themesflat-button bg-white width-150">@firstCategory.Name</a>
-                                    </div>
-                                    <div class="overlay-effect bg-color-1"></div>
+
+                            <div class="thumb">
+                                <img src="" alt="Image">
+                                <div class="elm-btn">
+                                    <a href="#" class="themesflat-button bg-white width-150">Featured Item Here</a>
                                 </div>
-                            }
+                                <div class="overlay-effect bg-color-1"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -212,31 +210,25 @@
                 <div class="flat-image-box style-1 row2 data-effect clearfix">
                     <div class="item data-effect-item">
                         <div class="inner">
-                            @if (secondCategory != null)
-                            {
-                                <div class="thumb">
-                                    <img src="@secondCategory.ImageURL" alt="Image">
-                                    <div class="elm-btn">
-                                        <a href="#" class="themesflat-button bg-white width-150">@secondCategory.Name</a>
-                                    </div>
-                                    <div class="overlay-effect bg-color-1"></div>
+                            <div class="thumb">
+                                <img src="" alt="Image">
+                                <div class="elm-btn">
+                                    <a href="#" class="themesflat-button bg-white width-150"></a>
                                 </div>
-                            }
+                                <div class="overlay-effect bg-color-1"></div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="item data-effect-item">
                         <div class="inner">
-                            @if (thirdCategory != null)
-                            {
-                                <div class="thumb">
-                                    <img src="@thirdCategory.ImageURL" alt="Image">
-                                    <div class="elm-btn">
-                                        <a href="#" class="themesflat-button bg-white width-150">@thirdCategory.Name</a>
-                                    </div>
-                                    <div class="overlay-effect bg-color-1"></div>
+                            <div class="thumb">
+                                <img src="" alt="Image">
+                                <div class="elm-btn">
+                                    <a href="#" class="themesflat-button bg-white width-150"></a>
                                 </div>
-                            }
+                                <div class="overlay-effect bg-color-1"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -245,16 +237,15 @@
                 <div class="flat-image-box style-1 data-effect div-h20 clearfix">
                     <div class="item data-effect-item">
                         <div class="inner">
-                            @if (fourthCategory != null)
-                            {
-                                <div class="thumb">
-                                    <img src="@fourthCategory.ImageURL" alt="Image">
-                                    <div class="elm-btn">
-                                        <a href="#" class="themesflat-button bg-white width-150">@fourthCategory.Name</a>
-                                    </div>
-                                    <div class="overlay-effect bg-color-1"></div>
+
+                            <div class="thumb">
+                                <img src="" alt="Image">
+                                <div class="elm-btn">
+                                    <a href="#" class="themesflat-button bg-white width-150"></a>
                                 </div>
-                            }
+                                <div class="overlay-effect bg-color-1"></div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -263,7 +254,6 @@
     </div><!-- /.container -->
 </section>
 <!-- END IMAGE BOX -->
-
 <!-- PRODUCT NEW -->
 <section class="flat-row row-product-new">
     <div class="container">
@@ -307,32 +297,105 @@
                             </div>
                             <a href="#" class="like"><i class="fa fa-heart-o"></i></a>
                         </li>
+
+                        <li class="product-item">
+                            <div class="product-thumb clearfix">
+                                <a href="#" class="product-thumb">
+                                    <img src="~/Content/images/shop/sh-4/13.jpg" alt="image">
+                                </a>
+                                <span class="new">New</span>
+                            </div>
+                            <div class="product-info text-center clearfix">
+                                <span class="product-title">Cotton White Underweaer Block Out Edition</span>
+                                <div class="price">
+                                    <ins>
+                                        <span class="amount">$100.00</span>
+                                    </ins>
+                                </div>
+                                <ul class="flat-color-list width-14">
+                                    <li>
+                                        <a href="#" class="red"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="blue"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="black"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="add-to-cart text-center">
+                                <a href="#">ADD TO CART</a>
+                            </div>
+                            <a href="#" class="like"><i class="fa fa-heart-o"></i></a>
+                        </li>
+
+                        <li class="product-item">
+                            <div class="product-thumb clearfix">
+                                <a href="#" class="product-thumb">
+                                    <img src="~/Content/images/shop/sh-4/13.jpg" alt="image">
+                                </a>
+                                <span class="new">New</span>
+                            </div>
+                            <div class="product-info text-center clearfix">
+                                <span class="product-title">Cotton White Underweaer Block Out Edition</span>
+                                <div class="price">
+                                    <ins>
+                                        <span class="amount">$100.00</span>
+                                    </ins>
+                                </div>
+                                <ul class="flat-color-list width-14">
+                                    <li>
+                                        <a href="#" class="red"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="blue"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="black"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="add-to-cart text-center">
+                                <a href="#">ADD TO CART</a>
+                            </div>
+                            <a href="#" class="like"><i class="fa fa-heart-o"></i></a>
+                        </li>
+
+                        <li class="product-item">
+                            <div class="product-thumb clearfix">
+                                <a href="#" class="product-thumb">
+                                    <img src="~/Content/images/shop/sh-4/13.jpg" alt="image">
+                                </a>
+                                <span class="new">New</span>
+                            </div>
+                            <div class="product-info text-center clearfix">
+                                <span class="product-title">Cotton White Underweaer Block Out Edition</span>
+                                <div class="price">
+                                    <ins>
+                                        <span class="amount">$100.00</span>
+                                    </ins>
+                                </div>
+                                <ul class="flat-color-list width-14">
+                                    <li>
+                                        <a href="#" class="red"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="blue"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="black"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="add-to-cart text-center">
+                                <a href="#">ADD TO CART</a>
+                            </div>
+                            <a href="#" class="like"><i class="fa fa-heart-o"></i></a>
+                        </li>
                     </ul>
-                 </div>
-             </div>
-         </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
-@*
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
-*@
