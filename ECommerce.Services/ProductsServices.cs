@@ -36,7 +36,7 @@ namespace ECommerce.Services
         {
             using (var context = new DBContext())
             {
-                context.Entry(product.Category).State = System.Data.Entity.EntityState.Unchanged;
+                // context.Entry(product.Category).State = System.Data.Entity.EntityState.Unchanged;
                 context.Products.Add(product);
                 context.SaveChanges();
             }
