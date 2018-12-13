@@ -204,6 +204,17 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\18739999_1945071925777068_1075014376965050980_n.jpg" />
+    <Content Include="Content\images\20156153_1974916716125922_2396105823198415268_n.jpg" />
+    <Content Include="Content\images\36041969_2143228802628045_8425114199813783552_n.jpg" />
+    <Content Include="Content\images\cake_animal.jpg" />
+    <Content Include="Content\images\cake_bday.jpg" />
+    <Content Include="Content\images\cake_character.jpg" />
+    <Content Include="Content\images\cake_holiday.jpg" />
+    <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\slider1.jpg" />
+    <Content Include="Content\images\slider2.jpg" />
+    <Content Include="Content\images\slider3.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
