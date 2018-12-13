@@ -16,14 +16,16 @@
 
 <br />
 
+@* displays database products as a table *@
 <div>
 <table>
     <thead>
         <tr>
-            <td>Product Name</td>
-            <td>Category</td>
-            <td>Price</td>
-            <td>Actions</td>
+            <td><h4><span>PRODUCT NAME</span></h4></td>
+            <td><h4><span>CATEGORY</span></h4></td>
+            <td><h4><span>FLAVOR</span></h4></td>
+            <td><h4><span>PRICE</span></h4></td>
+            <td><h4><span>OPTIONS</span></h4></td>
         </tr>
     </thead>
     <tbody>
@@ -31,11 +33,12 @@
         {
         <tr>
             <td>@product.Name</td>
-            <td> - </td>
+            <td>@product.Category </td>
+            <td>@product.Flavor </td>
             <td>@product.Price</td>
             <td>
                 <button class="editBtn" data-id="@product.ID" product="@product.ID">EDIT</button>
-                <button class="deleteBtn" data-id="@product.ID">DELETE</button>
+                <button class="deleteBtn" data-id="@product.ID" product="@product.ID">DELETE</button>
             </td>
         </tr>
         }
