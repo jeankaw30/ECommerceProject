@@ -6,7 +6,9 @@
 <h2>Create Category</h2>
 <br />
 
-<form method="post">
+<form method="post" action="#" enctype = "multipart/form-data" >
+
+
     <label>Name</label>
     <input name="Name" />
     <br />
@@ -32,6 +34,7 @@
 
     <button type="submit">SAVE</button>
 </form>
+
 <script>
     $("#imageUpload").onclick(function () {
         debugger;
@@ -44,7 +47,7 @@
             }
             $.ajax({
                 type: 'POST',
-                url: '/Content/images',
+                url: '~/Content/images',
                 dataType: 'json',
                 data: formData,
                 contentType: false,
