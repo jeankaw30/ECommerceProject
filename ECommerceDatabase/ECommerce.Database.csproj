@@ -49,21 +49,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBContext.cs" />
-    <Compile Include="Migrations\201812120615419_initial.cs" />
-    <Compile Include="Migrations\201812120615419_initial.Designer.cs">
-      <DependentUpon>201812120615419_initial.cs</DependentUpon>
+    <Compile Include="Migrations\201812040807139_Initial.cs" />
+    <Compile Include="Migrations\201812040807139_Initial.Designer.cs">
+      <DependentUpon>201812040807139_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201812121818288_AddProduct.cs" />
-    <Compile Include="Migrations\201812121818288_AddProduct.Designer.cs">
-      <DependentUpon>201812121818288_AddProduct.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812122112476_AddedDeleteProduct.cs" />
-    <Compile Include="Migrations\201812122112476_AddedDeleteProduct.Designer.cs">
-      <DependentUpon>201812122112476_AddedDeleteProduct.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812090903545_AddedIsFeaturd.cs" />
-    <Compile Include="Migrations\201812090903545_AddedIsFeaturd.Designer.cs">
-      <DependentUpon>201812090903545_AddedIsFeaturd.cs</DependentUpon>
+    <Compile Include="Migrations\201812080734418_AddedFlavor.cs" />
+    <Compile Include="Migrations\201812080734418_AddedFlavor.Designer.cs">
+      <DependentUpon>201812080734418_AddedFlavor.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -79,17 +71,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201812120615419_initial.resx">
-      <DependentUpon>201812120615419_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201812040807139_Initial.resx">
+      <DependentUpon>201812040807139_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812121818288_AddProduct.resx">
-      <DependentUpon>201812121818288_AddProduct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812122112476_AddedDeleteProduct.resx">
-      <DependentUpon>201812122112476_AddedDeleteProduct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812090903545_AddedIsFeaturd.resx">
-      <DependentUpon>201812090903545_AddedIsFeaturd.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201812080734418_AddedFlavor.resx">
+      <DependentUpon>201812080734418_AddedFlavor.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
