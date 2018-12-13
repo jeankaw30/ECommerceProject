@@ -64,9 +64,9 @@ namespace ECommerceWebsite.Controllers
 
         // DELETE 
         [HttpPost]
-        public ActionResult Delete(Product product)
+        public ActionResult Delete(int ID)
         {
-            productsService.UpdateProduct(product);
+            productsService.DeleteProduct(ID);
             return RedirectToAction("ProductTable");
         }
 
